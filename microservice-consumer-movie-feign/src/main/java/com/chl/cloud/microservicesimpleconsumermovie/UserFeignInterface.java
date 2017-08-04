@@ -1,10 +1,7 @@
 package com.chl.cloud.microservicesimpleconsumermovie;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @version : 1.0
@@ -17,4 +14,9 @@ public interface UserFeignInterface {
 
     @RequestMapping(method = RequestMethod.GET, value = "/simple/{id}")
     public User findById(@PathVariable("id") Long id);
+
+
+    @RequestMapping(method = RequestMethod.GET, value = "/user")
+    public User postUser(@RequestBody User user);
+
 }

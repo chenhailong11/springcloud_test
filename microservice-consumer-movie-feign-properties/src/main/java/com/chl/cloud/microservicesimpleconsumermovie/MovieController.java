@@ -18,10 +18,10 @@ public class MovieController {
     return this.userFeignInterface.findById(id);
   }
 
-  @GetMapping("/test")
+/*  @GetMapping("/test")
   public User testPost(User user){
     return this.userFeignInterface.postUser(user);
-  }
+  }*/
 
 
 }
